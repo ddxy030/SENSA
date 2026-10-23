@@ -5,6 +5,14 @@ import argparse
 
 import torch
 
+# Support direct execution from the repository root.
+import sys as _sys
+from pathlib import Path as _Path
+
+_REPO_ROOT = str(_Path(__file__).resolve().parents[1])
+if _REPO_ROOT not in _sys.path:
+    _sys.path.insert(0, _REPO_ROOT)
+
 from configs.sensa_config import make_config
 from data_provider.data_factory import build_data_bundle, create_data_loader
 from models.sensa import SENSA, load_sensa_checkpoint
