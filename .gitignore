@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Secrets and local environment
+.env
+.env.*
+*.pem
+*.key
+
+# Data, embeddings, and pretrained models
+cache/
+pretrained/
+checkpoints*/
+*.pth
+*.pt
+*.ckpt
+*.npz
+*.npy
+
+# Experiment outputs (not part of this source release)
+logs/
+results/
+outputs/
+runs/
+
+# The corrected nine-domain CSV dataset is intentionally released.
+# Do not ignore data/.
